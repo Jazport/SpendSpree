@@ -1,4 +1,4 @@
-# Budget Tracker (SASS + JavaScript)
+# Budget Tracker
 
 A lightweight Budget Tracker app built using SASS and JavaScript, demonstrating object-oriented design with classes and encapsulation.
 
