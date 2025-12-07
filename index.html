@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SpendSpree</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="site-title">SpendSpree</h1>
+      <p class="subtitle">Track income, expenses and watch your budget grow.</p>
+    </header>
+
+    <section class="summary">
+      <div class="summary-card income-card">
+        <h2>Income</h2>
+        <p class="amount" id="income-total">$0.00</p>
+      </div>
+
+      <div class="summary-card budget-card">
+        <h2 class="budget-heading">Total Budget</h2>
+        <p class="amount total" id="budget-total">$0.00</p>
+      </div>
+
+      <div class="summary-card expenses-card">
+        <h2>Expenses</h2>
+        <p class="amount" id="expenses-total">$0.00</p>
+      </div>
+    </section>
+
+    <section class="forms">
+      <div class="form-card">
+        <h3>Add Income</h3>
+        <form id="income-form" autocomplete="off">
+          <div class="field">
+            <label for="income-desc">Description</label>
+            <input id="income-desc" name="desc" type="text" placeholder="Enter source of income..." />
+          </div>
+          <div class="field">
+            <label for="income-amount">Amount</label>
+            <input id="income-amount" name="amount" type="number" step="0.01" placeholder="0.00" />
+          </div>
+          <div class="actions">
+            <button class="btn" type="submit">Add Income</button>
+            <button class="btn clear" type="button" id="clear-income">Clear</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-card">
+        <h3>Add Expense</h3>
+        <form id="expense-form" autocomplete="off">
+          <div class="field">
+            <label for="expense-desc">Description</label>
+            <input id="expense-desc" name="desc" type="text" placeholder="Enter expense name or category..." />
+          </div>
+          <div class="field">
+            <label for="expense-amount">Amount</label>
+            <input id="expense-amount" name="amount" type="number" step="0.01" placeholder="0.00" />
+          </div>
+          <div class="actions">
+            <button class="btn danger" type="submit">Add Expense</button>
+            <button class="btn clear" type="button" id="clear-expense">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="lists">
+      <div class="list-card">
+        <h3>Income Items</h3>
+        <ul id="income-list" class="items-list"></ul>
+      </div>
+
+      <div class="list-card">
+        <h3>Expense Items</h3>
+        <ul id="expense-list" class="items-list"></ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 SpendSpree. All rights reserved</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
